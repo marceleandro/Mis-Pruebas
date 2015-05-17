@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+	<title></title>
+</head>
+<body>
+<div class="container" ng-controller="FacturaCTRL">
+<div class="row">
+	<div class="col-md-3">
+		<img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS1_hR8QnB4ovRLnEXRI4SRI-FQ87xLDsbSHyB0haWeQb5GQM76">
+	</div>
+	
+	</br>
+	</br>
+	<div class="col-md-4">
+		<div class="row">
+			Cin&eacute;polis Paseo Metr&oacute;poli
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				Pel&iacute;cula:
+			</div>
+			<div class="col-md-8">
+				{{pedido.pelicula}} 
+			</div>
+
+			<div class="col-md-4">
+				Fecha:
+			</div>
+			<div class="col-md-8">
+				{{pedido.fecha}} 
+			</div>
+
+			<div class="col-md-4">
+				Asientos:
+			</div>
+			<div class="col-md-8">
+				<div ng-repeat="asiento in pedido.asientos">
+				{{asiento}}
+			   	</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+		<div class="col-md-2">
+		<div class="row">
+			TOTAL:
+		</div>
+		<div class="row">
+			{{pedido.total}}
+		</div>	
+		</div>
+
+		<div class="col-md-1">
+		<div class="rox">
+			<button ng-click="aceptar()" class="btn btn-success">ACEPTAR</button>
+		</div>
+		</div>
+
+
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="controller.js"></script>
+</body>
+</html>
